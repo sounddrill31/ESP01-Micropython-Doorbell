@@ -17,9 +17,9 @@ led = Pin(2, Pin.OUT)
 
 while True:
     if not button.value():
-        led.value(1)
+        led.value(1) #invert this as you want, my esp01S turns led on when asked to turn off and vice versa 
         url = "https://maker.ifttt.com/trigger/{event}/with/key/{your_key}"
         response = urequests.post(url)
         response.close()
     else:
-        led.value(0)
+        led.value(0) #invert this as you want, my esp01S turns led on when asked to turn off and vice versa 
